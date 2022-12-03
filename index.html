@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index2.css">
+    <script src="script.js" defer></script>
+    <title>Wordly!</title>
+    <link rel="shortcut icon" href="assests/lumiverse2.png">
+
+</head>
+
+<body>
+
+    <nav role="navigation">
+
+
+        <div id="menuToggle">
+            <input type="checkbox" />
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="#" target="_blank">
+                    <li>Landing Page</li>
+                </a>
+                <a href="https://twitter.com/DarkyZ20" target="_blank">
+                    <li>Twitter</li>
+                </a>
+                <a href="https://www.youtube.com/channel/UCVBIgo6X_wKIt2GYx6Nh3TA" target="_blank">
+                    <li>YouTube</li>
+                </a>
+                <a href="https://github.com/darkyzowo" target="_blank">
+                    <li>GitHub</li>
+                </a>
+            </ul>
+        </div>
+
+        <div id="nav-text-section" class="nav-section">
+
+            <a href="" class="animated2">Welcome to Wordly!</a>
+    </nav>
+
+    <div class="alert-container" data-alert-container></div>
+    <div data-guess-grid class="guess-grid">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+
+    </div>
+
+    <div data-keyboard class="keyboard">
+
+        <button class="key" data-key="Q">Q</button>
+        <button class="key" data-key="W">W</button>
+        <button class="key" data-key="E">E</button>
+        <button class="key" data-key="R">R</button>
+        <button class="key" data-key="T">T</button>
+        <button class="key" data-key="Y">Y</button>
+        <button class="key" data-key="U">U</button>
+        <button class="key" data-key="I">I</button>
+        <button class="key" data-key="O">O</button>
+        <button class="key" data-key="P">P</button>
+        <div class="space"></div>
+        <button class="key" data-key="A">A</button>
+        <button class="key" data-key="S">S</button>
+        <button class="key" data-key="D">D</button>
+        <button class="key" data-key="F">F</button>
+        <button class="key" data-key="G">G</button>
+        <button class="key" data-key="H">H</button>
+        <button class="key" data-key="J">J</button>
+        <button class="key" data-key="K">K</button>
+        <button class="key" data-key="L">L</button>
+        <div class="space"></div>
+        <button data-enter class="key large">Enter</button>
+        <button class="key" data-key="Z">Z</button>
+        <button class="key" data-key="X">X</button>
+        <button class="key" data-key="C">C</button>
+        <button class="key" data-key="V">V</button>
+        <button class="key" data-key="B">B</button>
+        <button class="key" data-key="N">N</button>
+        <button class="key" data-key="M">M</button>
+        <button data-delete class="key large">DEL</button>
+        </button>
+
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <div onclick="CloseModal()" class="CloseIcon">✖</div>
+            <img align="right" src="assests/lumiverse.png" alt="lumi">
+            <h1 style="text-align: left; color: hsl(240, 3%, 41%);">
+                How to play?</h1>
+            <h3 style="text-align: left; color: #ccc;">
+                Try to guess the word within 6 tries!</h3> <br />
+
+            <p style="color: #ccc; font-size: 20px">
+            <ul>
+                <li style="color: #ccc; font-size: 20px">Each guess must be a valid & existing 5 letter word. </li>
+                <br />
+                <li style="color: #ccc; font-size: 20px">With each guess, the colors of the tiles will change, this will
+                    reveal helpful information. </li> <br />
+                <li style="color: #ccc; font-size: 20px">If you manage to guess the word within 6 tries, a fancy
+                    animation will play & all the tiles will turn green. </li> <br />
+                <li style="color: #ccc; font-size: 20px">However, if you do not manage to guess the word within 6 tries,
+                    you'll be presented with a "nice try, better luck next time" support message. But don't worry, you
+                    can always try again tomorrow (word resets every 24 hrs!) </li> <br />
+
+            </ul>
+            </p>
+
+            <hr>
+
+            <p style="color: #ccc; font-size: 35px">
+                <br /> <b>
+                    Examples
+                </b>
+                <br />
+            </p>
+
+            <p style="color: #ccc; font-size: 20px">
+                <img align="left" src="assests/correct.PNG" alt="corc" /> <br />
+                <br />This image example shows that the "w or W" is in the right spot (because the tile has turned
+                green) &
+                exists inside the word you're trying
+                to
+                guess.
+
+            </p>
+
+            <p style="color: #ccc; font-size: 20px">
+                <img align="left" src="assests/wrong-loc.PNG" alt="corc" /> <br />
+                <br />This image example shows that the "i or I" is in the wrong spot/location (because the tile has
+                turned yellow), but
+                exists inside the word you're trying
+                to
+                guess.
+
+            </p>
+
+            <p style="color: #ccc; font-size: 20px">
+                <img align="left" src="assests/wrong.png" alt="corc" /> <br />
+                <br />This image example shows that the "u or U" does not exist in the word you're trying to guess
+                (because the tile has
+                turned gray).
+
+            </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
