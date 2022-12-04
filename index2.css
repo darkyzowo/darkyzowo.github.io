@@ -96,7 +96,7 @@ a.underline-hover-effect {
   left: 0%;
 
   visibility: visible;
-  -webkit-animation: fadeIn 500ms;
+  -webkit-animation: fadeIn 250ms;
   animation: fadeIn 250ms;
 
 }
