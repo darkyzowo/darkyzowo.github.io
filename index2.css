@@ -130,13 +130,14 @@ a.underline-hover-effect {
   cursor: pointer;
   font-weight: bolder;
   font-size: 30px;
-  color: #ff7c50;
+  color: #ccc;
 
 }
 
 .CloseIcon:hover {
 
-  background-color: hsl(240, 2%, 23%);
+
+  color: #ff0000;
   border-radius: 10px;
 
 }
