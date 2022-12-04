@@ -17,8 +17,22 @@ body {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+
+}
+
+@media only screen and (max-width: 620px) {
+
+  /* For mobile phones: */
+  .menu,
+  .main,
+  .right {
+    width: 100%;
+  }
 
 }
 
@@ -82,8 +96,8 @@ a.underline-hover-effect {
   left: 0%;
 
   visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 500ms;
+  -webkit-animation: fadeIn 500ms;
+  animation: fadeIn 250ms;
 
 }
 
