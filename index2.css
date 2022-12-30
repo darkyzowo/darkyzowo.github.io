@@ -159,31 +159,6 @@ body {
 
 }
 
-a.underline-hover-effect {
-  text-decoration: none;
-  color: inherit;
-}
-
-.underline-hover-effect {
-  display: inline-block;
-  position: relative;
-}
-
-.underline-hover-effect::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ff7c50;
-  transition: width 0.5s ease-out;
-}
-
-.underline-hover-effect:hover::before {
-  width: 100%;
-}
-
 .animated2 {
 
   text-align: center;
@@ -203,6 +178,17 @@ a.underline-hover-effect {
 .animated2:hover {
   background-position: -100%;
 }
+
+/*.data-statistic-container {
+  
+  background-color: white;
+  border: 1px solid gray;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  display: none;
+  z-index: 1;
+}*/
 
 .overlay {
   position: fixed;

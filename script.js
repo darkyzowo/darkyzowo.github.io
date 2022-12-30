@@ -15300,6 +15300,10 @@ const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
 const targetWord = targetWords[Math.floor(dayOffset)]
 
+let winStreak = 0
+let totalWins = 0
+let loseStreak = 0
+
 startInteraction()
 
 function startInteraction() {
@@ -15459,7 +15463,7 @@ function shakeTiles(tiles) {
 function checkWinLose(guess, tiles) {
 
     if (guess === targetWord) {
-        showAlert("You win, yay!", 5000)
+        showAlert("You win, POG!", 5000)
         danceTiles(tiles)
         stopInteraction()
         return
@@ -15467,7 +15471,7 @@ function checkWinLose(guess, tiles) {
 
     const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])")
     if (remainingTiles.length === 0) {
-        showAlert("Sorry, you lose! The correct word is: " + targetWord.toUpperCase(), null)
+        showAlert("Aw, you lost! The correct word is: " + targetWord.toUpperCase(), null)
         stopInteraction()
     }
 }
@@ -15501,3 +15505,23 @@ function CloseModal() {
     let element = document.getElementById('overlay')
     element.style.display = 'none'
 }
+
+if (guess === targetWord) {
+    // Increment total wins and win streak, reset lose streak
+    totalWins += 1
+    winStreak += 1
+    loseStreak = 0
+} else {
+    // Increment lose streak, reset win streak
+    loseStreak += 1
+    winStreak = 0
+}
+
+function displayStatistics() {
+    const statisticContainer = document.querySelector("[data-statistic-container]")
+    statisticContainer.innerHTML = `Win Streak: ${winStreak}, Total Wins: ${totalWins}, Lose Streak: ${loseStreak}`
+
+    statisticContainer.style.display = "block"
+}
+
+displayStatistics()
