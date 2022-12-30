@@ -15506,22 +15506,20 @@ function CloseModal() {
     element.style.display = 'none'
 }
 
-if (guess === targetWord) {
-    // Increment total wins and win streak, reset lose streak
-    totalWins += 1
-    winStreak += 1
-    loseStreak = 0
-} else {
-    // Increment lose streak, reset win streak
-    loseStreak += 1
-    winStreak = 0
+function updateStats() {
+    const statsElement = document.getElementByID('stats');
+    statsElement.innerHTML = `Win Streak: ${winStreak}, Total Wins: ${totalWins}, Lose Streak: ${loseStreak}`;
+
+    if (guess === targetWord) {
+        // Increment total wins and win streak, reset lose streak
+        totalWins += 1
+        winStreak += 1
+        loseStreak = 0
+    } else {
+        // Increment lose streak, reset win streak
+        loseStreak += 1
+        winStreak = 0
+    }
 }
 
-function displayStatistics() {
-    const statisticContainer = document.querySelector("[data-statistic-container]")
-    statisticContainer.innerHTML = `Win Streak: ${winStreak}, Total Wins: ${totalWins}, Lose Streak: ${loseStreak}`
-
-    statisticContainer.style.display = "block"
-}
-
-displayStatistics()
+/// i have no fucking idea how to make this work /// ?
